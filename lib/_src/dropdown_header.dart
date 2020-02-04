@@ -66,6 +66,7 @@ class _DropdownHeaderState extends DropdownState<DropdownHeader> {
                           width: MediaQuery.of(context).size.width * 0.85,
                           child: new Text(
                             getItemLabel(title),
+                            textAlign: TextAlign.center,
                             style: new TextStyle(
                               color: selected ? primaryColor : unselectedColor,
                             ),
