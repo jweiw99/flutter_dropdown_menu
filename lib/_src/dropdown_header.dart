@@ -61,7 +61,8 @@ class _DropdownHeaderState extends DropdownState<DropdownHeader> {
                 child:
                     new Row(mainAxisSize: MainAxisSize.min, children: <Widget>[
                   new Container(
-                      height: 35,
+                      height: 45,
+                      width: MediaQuery.of(context).size.width * 0.85,
                       child: new Text(
                         getItemLabel(title),
                         style: new TextStyle(
