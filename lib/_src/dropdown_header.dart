@@ -57,11 +57,11 @@ class _DropdownHeaderState extends DropdownState<DropdownHeader> {
           child: new DecoratedBox(
               decoration: new BoxDecoration(
                   border: new Border(left: Divider.createBorderSide(context))),
-              child: new Container(
+              child: new Center(
                 child:
                     new Row(mainAxisSize: MainAxisSize.min, children: <Widget>[
-                  Padding(
-                      padding: new EdgeInsets.only(left: 12.0),
+                  new Container(
+                      height: 35,
                       child: new Text(
                         getItemLabel(title),
                         style: new TextStyle(
