@@ -31,7 +31,7 @@ class DropdownHeader extends DropdownWidget {
       DropdownMenuController controller,
       this.onTap,
       Key key,
-      this.height: 46.0,
+      this.height: 56.0,
       GetItemLabel getItemLabel})
       : getItemLabel = getItemLabel ?? defaultGetItemLabel,
         assert(titles != null && titles.length > 0),
@@ -63,7 +63,6 @@ class _DropdownHeaderState extends DropdownState<DropdownHeader> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       new Container(
-                          height: 450,
                           width: MediaQuery.of(context).size.width * 0.85,
                           child: new Text(
                             getItemLabel(title),
