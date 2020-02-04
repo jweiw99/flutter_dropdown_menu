@@ -57,28 +57,23 @@ class _DropdownHeaderState extends DropdownState<DropdownHeader> {
           child: new DecoratedBox(
               decoration: new BoxDecoration(
                   border: new Border(left: Divider.createBorderSide(context))),
-              child: Container(
-                  color: Colors.blue[50],
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: <Widget>[
-                      Container(
-                          color: Theme.of(context).primaryColor,
-                          width: 3.0,
-                          height: 20.0),
-                      Padding(
-                          padding: EdgeInsets.only(left: 12.0),
-                          child: Container(
-                              width: MediaQuery.of(context).size.width * 0.90,
-                              child: new Text(
-                                getItemLabel(title),
-                                style: new TextStyle(
-                                  color:
-                                      selected ? primaryColor : unselectedColor,
-                                ),
-                              ))),
-                    ],
-                  )))),
+              child: new Center(
+                  child: new Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: <Widget>[
+                    Container(
+                        width: MediaQuery.of(context).size.width * 0.90,
+                        child: new Text(
+                          getItemLabel(title),
+                          style: new TextStyle(
+                            color: selected ? primaryColor : unselectedColor,
+                          ),
+                        )),
+                    new Icon(
+                      selected ? Icons.arrow_drop_up : Icons.arrow_drop_down,
+                      color: selected ? primaryColor : unselectedColor,
+                    )
+                  ])))),
       onTap: () {
         if (widget.onTap != null) {
           widget.onTap(index);
