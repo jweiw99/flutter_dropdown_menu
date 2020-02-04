@@ -143,7 +143,7 @@ class _DropdownMenuState extends DropdownState<DropdownMenu>
     for (int i = 0, c = _dropdownAnimations.length; i < c; ++i) {
       _dropdownAnimations[i].dispose();
     }
-
+    _fadeController.dispose();
     super.dispose();
   }
 
@@ -191,7 +191,7 @@ class _DropdownMenuState extends DropdownState<DropdownMenu>
   Widget build(BuildContext context) {
     List<Widget> list = [];
 
-    print("build ${new DateTime.now()}");
+    //print("build ${new DateTime.now()}");
 
     if (_show) {
       list.add(
@@ -258,7 +258,7 @@ class _DropdownMenuState extends DropdownState<DropdownMenu>
 
   int _activeIndex;
 
-  Future<void> onShow(int index) {
+  TickerFuture onShow(int index) {
     //哪一个是要展示的
 
     assert(index >= 0 && index < _dropdownAnimations.length);
@@ -282,7 +282,7 @@ class _DropdownMenuState extends DropdownState<DropdownMenu>
               _show = true;
             });
 
-            return new Future.value(null);
+            return new TickerFuture.complete();
           }
 
           break;
