@@ -58,24 +58,21 @@ class _DropdownHeaderState extends DropdownState<DropdownHeader> {
               decoration: new BoxDecoration(
                   border: new Border(left: Divider.createBorderSide(context))),
               child: new Center(
-                child: new Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      new Container(
-                          width: MediaQuery.of(context).size.width * 0.85,
-                          child: new Text(
-                            getItemLabel(title),
-                            textAlign: TextAlign.center,
-                            style: new TextStyle(
-                              color: selected ? primaryColor : unselectedColor,
-                            ),
-                          )),
-                      new Icon(
-                        selected ? Icons.arrow_drop_up : Icons.arrow_drop_down,
-                        color: selected ? primaryColor : unselectedColor,
-                      )
-                    ]),
+                child:
+                    new Row(mainAxisSize: MainAxisSize.min, children: <Widget>[
+                  new Container(
+                      width: MediaQuery.of(context).size.width * 0.85,
+                      child: new Text(
+                        getItemLabel(title),
+                        style: new TextStyle(
+                          color: selected ? primaryColor : unselectedColor,
+                        ),
+                      )),
+                  new Icon(
+                    selected ? Icons.arrow_drop_up : Icons.arrow_drop_down,
+                    color: selected ? primaryColor : unselectedColor,
+                  )
+                ]),
               ))),
       onTap: () {
         if (widget.onTap != null) {
