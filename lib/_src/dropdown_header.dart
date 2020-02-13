@@ -53,7 +53,7 @@ class _DropdownHeaderState extends DropdownState<DropdownHeader> {
     return new GestureDetector(
       behavior: HitTestBehavior.opaque,
       child: new Padding(
-          padding: new EdgeInsets.fromLTRB(0.0, 15.0, 0.0, 15.0),
+          padding: new EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 10.0),
           child: new DecoratedBox(
               decoration: new BoxDecoration(
                   border: new Border(left: Divider.createBorderSide(context))),
@@ -61,7 +61,7 @@ class _DropdownHeaderState extends DropdownState<DropdownHeader> {
                 child:
                     new Row(mainAxisSize: MainAxisSize.min, children: <Widget>[
                   new Container(
-                      width: MediaQuery.of(context).size.width * 0.85,
+                      width: MediaQuery.of(context).size.width * 0.82,
                       child: new Text(
                         getItemLabel(title),
                         style: new TextStyle(
