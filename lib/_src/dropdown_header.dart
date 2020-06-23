@@ -53,7 +53,7 @@ class _DropdownHeaderState extends DropdownState<DropdownHeader> {
     return new GestureDetector(
       behavior: HitTestBehavior.opaque,
       child: new Padding(
-          padding: new EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 10.0),
+          padding: new EdgeInsets.fromLTRB(15.0, 10.0, 10.0, 10.0),
           child: new DecoratedBox(
               decoration: new BoxDecoration(
                   border: new Border(left: Divider.createBorderSide(context))),
