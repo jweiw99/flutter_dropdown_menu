@@ -60,13 +60,14 @@ class _DropdownHeaderState extends DropdownState<DropdownHeader> {
               child: new Row(
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
-                      new Text(
-                        getItemLabel(title),
-                        overflow: TextOverflow.ellipsis,
-                        style: new TextStyle(
-                          color: selected ? primaryColor : unselectedColor,
-                        ),
-                      ),
+                        Expanded(child: 
+                            new Text(
+                              getItemLabel(title),
+                              overflow: TextOverflow.ellipsis,
+                              style: new TextStyle(
+                                color: selected ? primaryColor : unselectedColor,
+                              ),
+                      )),
                       new Icon(
                         selected ? Icons.arrow_drop_up : Icons.arrow_drop_down,
                         color: selected ? primaryColor : unselectedColor,
