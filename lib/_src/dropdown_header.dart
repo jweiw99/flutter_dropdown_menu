@@ -62,6 +62,7 @@ class _DropdownHeaderState extends DropdownState<DropdownHeader> {
                     children: <Widget>[
                       new Text(
                         getItemLabel(title),
+                        overflow: TextOverflow.ellipsis,
                         style: new TextStyle(
                           color: selected ? primaryColor : unselectedColor,
                         ),
