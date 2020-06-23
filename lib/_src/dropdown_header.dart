@@ -60,14 +60,12 @@ class _DropdownHeaderState extends DropdownState<DropdownHeader> {
               child: new Center(
                 child:
                     new Row(mainAxisSize: MainAxisSize.min, children: <Widget>[
-                  new Container(
-                      width: MediaQuery.of(context).size.width * 0.82,
-                      child: new Text(
+                      new Text(
                         getItemLabel(title),
                         style: new TextStyle(
                           color: selected ? primaryColor : unselectedColor,
                         ),
-                      )),
+                      ),
                   new Icon(
                     selected ? Icons.arrow_drop_up : Icons.arrow_drop_down,
                     color: selected ? primaryColor : unselectedColor,
